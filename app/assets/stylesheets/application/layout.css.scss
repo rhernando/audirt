@@ -11,7 +11,7 @@ html {
 
 body {
   .header-container {
-    border-bottom: 20px solid #e4221e;
+    border-bottom: 10px solid #e4221e;
   }
   .header-container, .footer-container, .main aside {
     background: #f17d41;
@@ -20,6 +20,17 @@ body {
     -webkit-box-shadow: 0 5px 10px #aaa;
     -moz-box-shadow: 0 5px 10px #aaa;
     box-shadow: 0 5px 10px #aaa;
+  }
+  #footer{
+    background: #f17d41;
+    -moz-box-shadow:    inset 0 0 10px #e4221e;
+    -webkit-box-shadow: inset 0 0 10px #e4221e;
+    box-shadow:         inset 0 0 10px #e4221e;
+
+    position:fixed;
+    width:100%;
+    bottom:0px;
+
   }
 }
 
@@ -33,7 +44,7 @@ body {
   width: 40%;
   text-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
   color: white;
-  font-family: 'ChunkFiveRegular';
+  font-family: 'Trebuchet MS';
   font-weight: normal;
   margin-bottom: 20px;
   h1{

@@ -7,7 +7,9 @@
     = render 'header'
     = render 'flashes'
 
-    = yield
+    .main-container
+      .main.wrapper.clearfix
+        = yield
 
     = render 'footer'
 
