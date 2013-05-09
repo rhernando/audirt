@@ -1,3 +1,16 @@
 - if user_signed_in?
   %h1 Home#index
   %p Find me in app/views/home/index.html.haml
+
+  = chart_tag('subscriptions_graph', 300, :days => 14)
+
+- else
+  %p
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi
+  #login-f
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      %p= f.email_field :email, :class => 'text', :placeholder => 'email'
+      %p= f.password_field :password, :class => 'text', :placeholder => 'Password'
+      .clearfix
+        = f.submit 'Acceder', :class => "submit"
+  %p= link_to 'Date de alta', new_user_registration_path, :class => 'button b_block'

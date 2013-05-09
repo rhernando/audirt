@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Audirt code:
+  = @visit.audirt_code
+%p
+  %b Num visit:
+  = @visit.num_visit
+
+= link_to 'Edit', edit_visit_path(@visit)
+\|
+= link_to 'Back', visits_path

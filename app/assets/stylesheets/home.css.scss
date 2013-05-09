@@ -1,3 +1,28 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#login-f {
+  margin: 25px;
+  background: #f17d41;
+  border-radius: 5px 5px 5px 5px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 32px;
+  width: 340px;
+
+  -moz-box-shadow:    inset 0 0 10px #e4221e;
+  -webkit-box-shadow: inset 0 0 10px #e4221e;
+  box-shadow:         inset 0 0 10px #e4221e;
+
+  .submit{
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 0 none;
+    border-radius: 5px 5px 5px 5px;
+    color: #e4221e;
+    float: right;
+    height: 30px;
+    margin-left: 0;
+  }
+
+}
+

@@ -1,0 +1,19 @@
+%h1 Listing audirt_codes
+
+%table
+  %tr
+    %th Code
+    %th
+    %th
+    %th
+
+  - @audirt_codes.each do |audirt_code|
+    %tr
+      %td= audirt_code.code
+      %td= link_to 'Show', audirt_code
+      %td= link_to 'Edit', edit_audirt_code_path(audirt_code)
+      %td= link_to 'Destroy', audirt_code, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Audirt code', new_audirt_code_path

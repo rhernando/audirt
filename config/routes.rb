@@ -1,4 +1,14 @@
 Audirt::Application.routes.draw do
+  resources :visits
+
+
+  resources :programas
+  resources :cadenas
+  resources :audirt_codes
+
+  resources :statistics
+  match 'stats(/:action)' => 'statistics#overview', :as => :statistics
+
   devise_for :users
 
   get "home/index"

@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Code:
+  = @audirt_code.code
+
+= link_to 'Edit', edit_audirt_code_path(@audirt_code)
+\|
+= link_to 'Back', audirt_codes_path

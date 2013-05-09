@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b String:
+  = @cadena.name
+%p
+  %b String:
+  = @cadena.logoname
+
+= link_to 'Edit', edit_cadena_path(@cadena)
+\|
+= link_to 'Back', cadenas_path

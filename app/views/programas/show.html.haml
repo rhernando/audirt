@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b String:
+  = @programa.string
+
+= link_to 'Edit', edit_programa_path(@programa)
+\|
+= link_to 'Back', programas_path
