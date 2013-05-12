@@ -7,3 +7,6 @@
       %h2 Un nuevo concepto para la medición de audiencias
     .logo
       = image_tag 'logo.png'
+    - if user_signed_in?
+      .user_side
+        = link_to 'salir', destroy_user_session_path, :method => :delete

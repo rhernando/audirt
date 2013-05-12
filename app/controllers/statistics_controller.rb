@@ -1,17 +1,14 @@
 class StatisticsController < ApplicationController
   def subscriptions_graph
     summ = 0
-    cols = Cadena.all.map{|x| ['string', x.name]}
+    cols = [['string', 'Cadena'], ['number','Share']]
     rows = []
-    (Cadena.count - 1).times.each do
-      num = 100-summ
-      rows << rand(num)
-      summ+=num
+    Cadena.all.each do |c|
+      rows << [c.name, rand(100)]
     end
-    rows << 100-summ
 
     render :json => {
-        :type => 'BarChart',
+        :type => 'PieChart',
         :cols => cols,
         :rows => rows,
         :options => {
